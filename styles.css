@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.bg-green{
+    background-color: #3fc25e;
+}
+
+main{
+    width: 50%;
+    height: 80vh;
+    background-color: #fff;
+}
+
+.inner{
+    width: 50%;
+}
+
+.inner-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./images/fidel-fernando-zyJGkpkAwZQ-unsplash.jpg);
+}
+
+input{
+    display: block;
+}
+
+.remember{
+    display: flex;
+}
+
+
+.inner-white{
+    background-color: #fff;
+}
+
+.login-header{
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.how-link a{
+    margin: 0;
+    color: #767c8a;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.front-text{
+    color: #fff;
+    font-size: 1.5rem;
+}
