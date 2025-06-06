@@ -13,28 +13,28 @@
   </head>
   <body class="bg-green">
     <main class="col-11 col-lg-6 col-md-11 mx-auto d-flex mt-5 rounded-2">
-      <div class="inner inner-bg">
-        <h1 class="front-text">Welcome to Federal Polytechnic, Ayede Library Management System</h1>
-          <p class="front-text">Where books meet seamless management. Explore our vast collection, borrow with ease, and manage your reading journey all in one place. Dive into a world of stories, knowledge, and discovery today!</p>
+      <div class="inner inner-bg p-4 d-none d-lg-block">
+        <h1 class="front-header">Welcome to the Saints Library Management System</h1>
+        <p class="front-text">Explore our vast collection of books, e-books, and resources to fuel your curiosity.</p>
       </div>
 
       <div class="inner inner-white p-4 rounded-3">
         <h2 class="login-header">Login</h2>
         <p class="how-link"><a href="">How do I get started?</a></p>
         
-        <div class="form-floating mb-3">
-  <input type="email" class="form-control shadow-none " id="floatingInput" placeholder="name@example.com">
-  <label for="floatingInput">Email address or username</label>
+        <div class="mb-2">
+          <label for="floating">Email address or username</label>
+  <input type="email" class="form-control shadow-none border border-success" id="floating" placeholder="name@example.com" name="email" required aria-required="true">
 </div>
 
-<div class="form-floating">
-  <input type="password" class="form-control h-1 shadow-none " id="floatingPassword" placeholder="Password">
-  <label for="floatingPassword">Password</label>
+<div>
+          <label for="floatingP">Password</label>
+  <input type="password" class="form-control shadow-none border border-success" id="floatingP" placeholder="password" name="password" required aria-required="true">
 </div>
 
 <div class="d-flex p-3 flex-remember gap-4">
   <span class="remember">
-    <input type="checkbox"><span>Remember Me</span>
+    <input type="checkbox" class=""><span>Remember Me</span>
 </span>
 
 <span>
@@ -42,7 +42,7 @@
 </span>
 </div>
         </form>
-      </div>
+</div>
 
     </main>
 

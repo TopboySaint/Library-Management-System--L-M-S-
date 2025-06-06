@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 .bg-green{
     background-color: #3fc25e;
@@ -47,7 +48,23 @@ input{
     text-decoration: none;
 }
 
+.front-header{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align:center;
+    transform: translateY(330px);
+    font-family: "Acme", sans-serif;
+}
+
 .front-text{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    text-align:center;
+    transform: translateY(325px);
+    font-family: "Roboto", sans-serif;
+}
+
+label{
+    font-size: 0.7rem;
 }
