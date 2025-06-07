@@ -18,29 +18,32 @@
         <p class="front-text">Explore our vast collection of books, e-books, and resources to fuel your curiosity.</p>
       </div>
 
-      <div class="inner inner-white p-4 rounded-3">
+      <div class="inner inner-white p-4 rounded-3 mt-5 col-12 col-lg-6">
         <h2 class="login-header">Login</h2>
         <p class="how-link"><a href="">How do I get started?</a></p>
         
         <div class="mb-2">
-          <label for="floating">Email address or username</label>
+          <label for="floating" class="fw-bold">Email address or username</label>
   <input type="email" class="form-control shadow-none border border-success" id="floating" placeholder="name@example.com" name="email" required aria-required="true">
 </div>
 
 <div>
-          <label for="floatingP">Password</label>
+          <label for="floatingP" class="fw-bold">Password</label>
   <input type="password" class="form-control shadow-none border border-success" id="floatingP" placeholder="password" name="password" required aria-required="true">
 </div>
 
-<div class="d-flex p-3 flex-remember gap-4">
+<div class="d-flex mt-3 flex-remember gap-4 justify-content-center">
   <span class="remember">
-    <input type="checkbox" class=""><span>Remember Me</span>
-</span>
+    <input type="checkbox" name="remember-me" id="rem-me">
+    <label for="rem-me" class="rem-me ms-1 fw-bold">Remember me</label>
+ </span>
 
-<span>
+<span class="forgot-pass rem-me">
   <a href="">Forgot password?</a>
 </span>
 </div>
+
+<button type="submit" class="btn btn-success bg-success form-control mt-3 bg-green shadow-none text-white rem-me">Login</button>
         </form>
 </div>
 
