@@ -1,0 +1,185 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library User Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for table and hover effects */
+        .table-row:hover {
+            background-color: #e5e7eb;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .sidebar-hidden {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Main Container -->
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="bg-blue-800 text-white w-64 p-4 sidebar md:block">
+            <div class="flex items-center mb-6">
+                <img src="https://via.placeholder.com/40" alt="Library Logo" class="w-10 h-10 mr-2">
+                <h1 class="text-xl font-bold">Library LMS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="#" class="text-lg hover:text-blue-200">Dashboard</a></li>
+                    <li class="mb-4"><a href="#" class="text-lg hover:text-blue-200">Search Books</a></li>
+                    <li class="mb-4"><a href="#" class="text-lg hover:text-blue-200">Profile</a></li>
+                    <li class="mb-4"><a href="#" class="text-lg hover:text-blue-200">Borrowing History</a></li>
+                    <li><a href="#" class="text-lg hover:text-blue-200">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden mb-4">
+                <button id="toggleSidebar" class="p-2 bg-blue-600 text-white rounded">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Welcome Header -->
+            <header class="mb-6">
+                <h2 class="text-2xl font-semibold text-gray-800">Welcome, Jane Doe</h2>
+                <p class="text-gray-600">Library ID: STU123456</p>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Profile Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold mb-4">Profile Summary</h3>
+                    <p><strong>Name:</strong> Jane Doe</p>
+                    <p><strong>Email:</strong> jane.doe@example.com</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Joined:</strong> Jan 10, 2023</p>
+                    <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Edit Profile</button>
+                </div>
+
+                <!-- Notifications -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold mb-4">Notifications</h3>
+                    <ul class="list-disc pl-5">
+                        <li class="text-red-600">Book "The Great Gatsby" is due in 2 days!</li>
+                        <li>Library Workshop on Digital Resources: June 10, 2025</li>
+                        <li>New books added to the catalog!</li>
+                    </ul>
+                    <button class="mt-4 text-blue-600 hover:underline">View All</button>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold mb-4">Quick Actions</h3>
+                    <button class="w-full bg-blue-600 text-white px-4 py-2 mb-2 rounded hover:bg-blue-700">Reserve a Book</button>
+                    <button class="w-full bg-blue-600 text-white px-4 py-2 mb-2 rounded hover:bg-blue-700">Request New Title</button>
+                    <button class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Fines</button>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="my-6">
+                <input type="text" placeholder="Search for books..." class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+
+            <!-- Issued Books Table -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold mb-4">Issued Books</h3>
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="bg-gray-200 text-left">
+                            <th class="p-2">Book Title</th>
+                            <th class="p-2">Issue Date</th>
+                            <th class="p-2">Return Date</th>
+                            <th class="p-2">Fine</th>
+                            <th class="p-2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="p-2">The Great Gatsby</td>
+                            <td class="p-2">May 25, 2025</td>
+                            <td class="p-2">June 9, 2025</td>
+                            <td class="p-2">$0.00</td>
+                            <td class="p-2"><button class="text-blue-600 hover:underline">Renew</button></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="p-2">To Kill a Mockingbird</td>
+                            <td class="p-2">May 20, 2025</td>
+                            <td class="p-2">June 3, 2025</td>
+                            <td class="p-2 text-red-600">$2.50</td>
+                            <td class="p-2"><button class="text-blue-600 hover:underline">Return</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle sidebar for mobile
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleSidebar.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-hidden');
+        });
+
+        // Mock search functionality
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('input', (e) => {
+            console.log('Searching for:', e.target.value);
+            // Add real search logic here with backend integration
+        });
+    </script>
+</body>
+</html>

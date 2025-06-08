@@ -76,5 +76,8 @@ label{
 .forgot-pass a{
     text-decoration: none;
     font-family: "Roboto", sans-serif;
+}
 
+#errorMsg{
+    display: none;
 }
