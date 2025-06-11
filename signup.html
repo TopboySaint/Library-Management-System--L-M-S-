@@ -15,18 +15,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
-  <body class="bg-green">
-    <main class="col-11 col-lg-6 col-md-11 mx-auto d-flex mt-5 rounded-2">
-      <div class="inner inner-bg p-4 d-none d-lg-block">
-        <h1 class="front-header">
+  <body class="bg-gren">
+    <main class="col-11 col-lg-6 col-md-11 mx-auto d-flex mt-1 rounded-2 sign-main">
+      <div class="inner inner-bground p-4 d-none d-lg-block">
+        <h1 class="front-header-two">
           Welcome to the Saints Library Management System
         </h1>
-        <p class="front-text">
+        <p class="front-text-two">
           A place where knowledge, imagination, and community come together.
         </p>
       </div>
 
-      <div class="inner inner-white p-4 rounded-3 mt-5 col-12 col-lg-6">
+      <div class="inner inner-white p-4 rounded-3 col-12 col-lg-6">
         <h2 class="login-header">Sign up</h2>
         <p class="how-link"><a href="">How do I get started?</a></p>
 
@@ -37,14 +37,27 @@
           >
             Please fill in the required fields
           </p>
-          <label for="floating" class="fw-bold"
-            >Email address or username</label
+          <label for="floatingName" class="fw-bold"
+            >Full Name</label
           >
+          <input
+            type="text"
+            class="form-control shadow-none border border-success"
+            id="floatingName"
+            placeholder="Jane Doe"
+            name="fname"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div>
+          <label for="floatingMail" class="fw-bold">Email Address</label>
           <input
             type="email"
             class="form-control shadow-none border border-success"
-            id="floating"
-            placeholder="name@example.com"
+            id="floatingMail"
+            placeholder="Enter your mail"
             name="email"
             required
             aria-required="true"
@@ -52,12 +65,38 @@
         </div>
 
         <div>
-          <label for="floatingP" class="fw-bold">Password</label>
+          <label for="floatingNumber" class="fw-bold">Phone Number</label>
+          <input
+            type="number"
+            class="form-control shadow-none border border-success"
+            id="floatingNumber"
+            placeholder="+23456789012"
+            name="phone"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div>
+          <label for="floatingUser" class="fw-bold">Username</label>
+          <input
+            type="text"
+            class="form-control shadow-none border border-success"
+            id="floatingUser"
+            placeholder="Enter a username"
+            name="username"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div>
+          <label for="floatingPass" class="fw-bold">Password</label>
           <input
             type="password"
             class="form-control shadow-none border border-success"
-            id="floatingP"
-            placeholder="password"
+            id="floatingPass"
+            placeholder="Password"
             name="password"
             required
             aria-required="true"
@@ -71,21 +110,20 @@
           </span>
 
           <span class="forgot-pass rem-me">
-            <a href="">Forgot password?</a>
+            <a href="index.html">Have an account?</a>
           </span>
         </div>
         <button
           type="submit"
-          id="loginUser"
+          id="signUpUser"
           class="btn btn-success bg-success form-control mt-3 bg-green shadow-none text-white rem-me"
         >
-          Login
+          Sign up
         </button>
-        <p class="text-center mt-2 rem-me"><a href="signup.html" class="text-decoration-none">Haven't registered?</a></p>
       </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="signup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

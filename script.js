@@ -10,6 +10,6 @@ loginUser.addEventListener('click', (e)=>{
     }else{
         errorMsg.style.display = "none"
         // e.submit()
-        window.location.href = "user.html"
+        // window.location.href = "user.html"
     }
 })

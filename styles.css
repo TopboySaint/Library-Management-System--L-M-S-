@@ -5,7 +5,16 @@
     background-color: #3fc25e;
 }
 
-main{
+.bg-gren{
+    background-color: #3fc25e;
+}
+
+.sign-main{
+    width: 50%;
+    background-color: #fff;
+}
+
+.indexMain{
     width: 50%;
     height: 80vh;
     background-color: #fff;
@@ -19,6 +28,12 @@ main{
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(./images/fidel-fernando-zyJGkpkAwZQ-unsplash.jpg);
+}
+
+.inner-bground{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./images/willi-nuchterlein-wEf46MTA4tw-unsplash.jpg);
 }
 
 input{
@@ -57,11 +72,28 @@ input{
     font-family: "Acme", sans-serif;
 }
 
+.front-header-two{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align:center;
+    transform: translateY(400px);
+    font-family: "Acme", sans-serif;
+}
+
 .front-text{
     color: #fff;
     font-size: 0.8rem;
     text-align:center;
     transform: translateY(325px);
+    font-family: "Roboto", sans-serif;
+}
+
+.front-text-two{
+    color: #fff;
+    font-size: 0.8rem;
+    text-align:center;
+    transform: translateY(400px);
     font-family: "Roboto", sans-serif;
 }
 
