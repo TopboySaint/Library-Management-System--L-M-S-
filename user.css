@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+#nav-bar{
+    width: 25%;
+    height: 100vh;
+    border: 2px solid red;
+    background-color:#3fc25e;
+}
+
+#dashboard{
+    width: 75%;
+}
+
+.logo-header a{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: "Acme", sans-serif;
+}
