@@ -13,7 +13,7 @@
   </head>
   <body>
     <main class="col-12 col-lg-12 col-md-12 mx-auto d-flex">
-      <div id="nav-bar">
+      <div id="nav-bar" class="">
         <div class="d-flex justify-content-center shadow gap-4 p-2">
           <span
             ><img
@@ -24,14 +24,98 @@
           <p class="mt-3 logo-header"><a href="">Saints LMS</a></p>
         </div>
 
-          <p class="mt-3 logo-header text-center"><a href="">Dashboard</a></p>
-          <p class="mt-3 logo-header text-center"><a href="">Search Books</a></p>
-          <p class="mt-3 logo-header text-center"><a href="">Profile</a></p>
-          <p class="mt-3 logo-header text-center"><a href="">Borrow Books</a></p>
-          <p class="mt-3 logo-header text-center"><a href="">Logout</a></p>
-
+        <p class="mt-3 logo-header text-center"><a href="">Dashboard</a></p>
+        <p class="mt-3 logo-header text-center"><a href="">Search Books</a></p>
+        <p class="mt-3 logo-header text-center"><a href="">Profile</a></p>
+        <p class="mt-3 logo-header text-center"><a href="">Borrow Books</a></p>
+        <p class="mt-3 logo-header text-center"><a href="">Logout</a></p>
       </div>
-      <div id="dashboard"></div>
+
+      <div id="dashboard" class="p-3">
+        <div>
+          <h1 id="welcomeMsg">Welcome, Saint</h1>
+          <p id="libraryId" class="mb-3 p-0">Library ID: 3692468</p>
+        </div>
+        <div class="d-lg-flex gap-3 gap-lg-4">
+          <div class="card p-3 profile-card shadow">
+            <p class="fs-5 fw-bold mb-4">Profile Summary</p>
+
+            <p><span class="fw-bold">Name:</span> Saint</p>
+            <p><span class="fw-bold">Email:</span> topboysaint@yahoo.com</p>
+            <p><span class="fw-bold">Phone:</span> +12404235560</p>
+            <p><span class="fw-bold">Joined:</span> May, 2020</p>
+
+            <button class="btn btn-success bg-success shadow-none">
+              Edit profile
+            </button>
+          </div>
+
+          <div class="card p-3 profile-card shadow">
+            <p class="fs-5 fw-bold mb-4">Notification</p>
+            <ul>
+              <li class="text-danger mb-3">Book "The Great Gatsby" is due in 2 days!</li>
+              <li class="mb-3">Library Workshop on Digital Resources: June 10, 2025</li>
+              <li class="mb-3">New books added to the catalog!</li>
+
+              <p><a href="" class="text-decoration-none">View all</a></p>
+            </ul>
+          
+          </div>
+
+          <div class="card p-3 profile-card shadow">
+            <p class="fs-5 fw-bold mb-4">Quick Actions</p>
+
+            <button class="btn btn-success bg-success shadow-none mb-3">
+              Reserve a Book
+            </button>
+
+            <button class="btn btn-success bg-success shadow-none mb-3">
+              Request a New Title
+            </button>
+
+            <button class="btn btn-success bg-success shadow-none mb-3">
+              Return a Book
+            </button>
+
+            <button class="btn btn-success bg-success shadow-none">
+              View Fines
+            </button>
+          </div>
+        </div>
+
+        <input type="text" name="search-books" placeholder="Search for books..." class="form-control shadow-none border border-success mt-4 p-3 w-100 searchBooks">
+        
+        <h4 class="mt-4">Issued Books</h4>
+        <table class="table table-bordered table-striped">
+
+          <thead>
+            <tr>
+              <th>Book Title</th>
+              <th>Issue Date</th>
+              <th>Return Date</th>
+              <th>Fine</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Javascript is Easy</td>
+              <td>May 25, 2025</td>
+              <td>May 28, 2025</td>
+              <td>$0.00</td>
+              <td><a href="" class="text-decoration-none">Renew</a></td>
+            </tr>
+
+            <tr>
+              <td>Who Moved my Cheese</td>
+              <td>May 18, 2025</td>
+              <td>June 9, 2025</td>
+              <td class="text-danger">$3.00</td>
+              <td><a href="" class="text-decoration-none">Return</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
   </body>
 </html>
