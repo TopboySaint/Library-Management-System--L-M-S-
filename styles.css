@@ -1,111 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
-.bg-green{
-    background-color: #3fc25e;
+.bg-green {
+  background-color: #3fc25e;
 }
 
-.sign-main{
-    width: 50%;
-    background-color: #fff;
+.sign-main {
+  width: 50%;
+  background-color: #fff;
 }
 
-.indexMain{
-    width: 50%;
-    height: 80vh;
-    background-color: #fff;
+.indexMain {
+  width: 50%;
+  height: 80vh;
+  background-color: #fff;
 }
 
-.inner{
-    width: 50%;
+.inner {
+  width: 50%;
 }
 
-.inner-bg{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(./images/fidel-fernando-zyJGkpkAwZQ-unsplash.jpg);
+.inner-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./images/fidel-fernando-zyJGkpkAwZQ-unsplash.jpg);
 }
 
-.inner-bground{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(./images/willi-nuchterlein-wEf46MTA4tw-unsplash.jpg);
+.inner-bground {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./images/willi-nuchterlein-wEf46MTA4tw-unsplash.jpg);
 }
 
-input{
-    display: block;
+input {
+  display: block;
 }
 
-.remember{
-    display: flex;
+.remember {
+  display: flex;
 }
 
-
-.inner-white{
-    background-color: #fff;
+.inner-white {
+  background-color: #fff;
 }
 
-.login-header{
-    margin: 0;
-    font-weight: 800;
-    font-size: 1.5rem;
-    font-family: "Roboto", sans-serif;
+.login-header {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
 }
 
-.how-link a{
-    margin: 0;
-    color: #767c8a;
-    font-size: 0.8rem;
-    text-decoration: none;
+.how-link a {
+  margin: 0;
+  color: #767c8a;
+  font-size: 0.8rem;
+  text-decoration: none;
 }
 
-.front-header{
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    text-align:center;
-    transform: translateY(330px);
-    font-family: "Acme", sans-serif;
+.front-header {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  transform: translateY(330px);
+  font-family: "Acme", sans-serif;
 }
 
-.front-header-two{
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    text-align:center;
-    transform: translateY(400px);
-    font-family: "Acme", sans-serif;
+.front-header-two {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  transform: translateY(400px);
+  font-family: "Acme", sans-serif;
 }
 
-.front-text{
-    color: #fff;
-    font-size: 0.8rem;
-    text-align:center;
-    transform: translateY(325px);
-    font-family: "Roboto", sans-serif;
+.front-text {
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  transform: translateY(325px);
+  font-family: "Roboto", sans-serif;
 }
 
-.front-text-two{
-    color: #fff;
-    font-size: 0.8rem;
-    text-align:center;
-    transform: translateY(400px);
-    font-family: "Roboto", sans-serif;
+.front-text-two {
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  transform: translateY(400px);
+  font-family: "Roboto", sans-serif;
 }
 
-label{
-    font-size: 0.7rem;
+label {
+  font-size: 0.7rem;
 }
 
-.rem-me{
-    font-size: 0.8rem;
+.rem-me {
+  font-size: 0.8rem;
 }
 
-.forgot-pass a{
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
+.forgot-pass a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 
-#errorMsg{
-    display: none;
+#errorMsg {
+  display: none;
 }

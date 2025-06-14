@@ -1,29 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-#nav-bar{
-    width: 25%;
-    height: 100vh;
-    background-color:#3fc25e;
+#nav-bar {
+  width: 25%;
+  height: 100vh;
+  background-color: #3fc25e;
 }
 
-#dashboard{
-    width: 75%;
+#dashboard {
+  width: 75%;
 }
 
-.logo-header a{
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-family: "Acme", sans-serif;
+.logo-header a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: "Acme", sans-serif;
 }
 
-.profile-card{
-    width: 33%;
+.profile-card {
+  width: 33%;
 }
 
-td a:hover{
-    text-decoration: underline;
+td a:hover {
+  text-decoration: underline;
 }
-

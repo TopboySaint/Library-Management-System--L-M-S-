@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LMS - Borrow Books</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="borrow.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body class="bg-light">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="borrow.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light">
     <div class="container py-4">
-        <header class="bg-green text-white p-4 rounded-3 shadow mb-4">
-            <h1 class="h3 fw-bold">Saints Library Management System</h1>
-            <p class="mb-0">Borrow your favorite books</p>
-        </header>
-        <div class="mb-4">
-            <input type="text" id="searchInput" class="form-control shadow-none border border-success" placeholder="Search for books...">
-        </div>
-        <div id="booksContainer" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-            <div class="col">
-                <div class="book-card card h-100 border border-success">
-                    <div class="card-body">
-                        <h5 class="card-title book-title">Book Title: Javascript is easy</h5>
-                        <p class="card-text book-author"><span class="fw-bold">Author:</span> Brendan Eich</p>
-                        <p class="card-text book-genre"><span class="fw-bold">Genre:</span> Programming</p>
-                        <button class="btn btn-success w-100 borrow-btn">Borrow</button>
-                    </div>
-                </div>
+      <header class="bg-green text-white p-4 rounded-3 shadow mb-4">
+        <h1 class="h3 fw-bold">Saints Library Management System</h1>
+        <p class="mb-0">Borrow your favorite books</p>
+      </header>
+      <div class="mb-4">
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control shadow-none border border-success"
+          placeholder="Search for books..."
+        />
+      </div>
+      <div
+        id="booksContainer"
+        class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"
+      >
+        <div class="col">
+          <div class="book-card card h-100 border border-success">
+            <div class="card-body">
+              <h5 class="card-title book-title">
+                Book Title: Javascript is easy
+              </h5>
+              <p class="card-text book-author">
+                <span class="fw-bold">Author:</span> Brendan Eich
+              </p>
+              <p class="card-text book-genre">
+                <span class="fw-bold">Genre:</span> Programming
+              </p>
+              <button class="btn btn-success w-100 borrow-btn">Borrow</button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    </body>
+  </body>
+</html>
